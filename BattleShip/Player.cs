@@ -11,12 +11,14 @@ namespace BattleShip
         public string name;
         public Board board;
         public Fleet fleet;
+        public List<Ship> destroyedShips;
         
         public Player(string name)
         {
             this.name = name;
             fleet = new Fleet();
             board = new Board();
+            destroyedShips = new List<Ship>(new Ship[5]);
         }
 
         public void PrintXAxis()
@@ -40,11 +42,27 @@ namespace BattleShip
                 Console.Write("║");
             }
             PrintBottomFrame();
+            PrintIndex();
         }
 
         public void PrintBottomFrame()
         {
             Console.Write("\n   ╚══════════════════════════════╝");
+        }
+
+        public void PrintIndex()
+        {
+            Console.WriteLine();
+            Console.Write($"   ╔════════KEY═══════╗ ───SUNK───\n");
+            Console.Write($"   ║ ( ) - Unknown    ║ ·{destroyedShips[0]}· \n");
+            Console.Write($"   ║ (X) - Miss       ║ ·{destroyedShips[1]}· \n");
+            Console.Write($"   ║ (C) - Carrier    ║ ·{destroyedShips[2]}· \n");
+            Console.Write($"   ║ (B) - Battleship ║ ·{destroyedShips[3]}· \n");
+            Console.Write($"   ║ (D) - Destroyer  ║ ·{destroyedShips[4]}· \n");
+            Console.Write($"   ║ (S) - Submarine  ║                      \n");
+            Console.Write($"   ║ (P) - Patrol     ║                      \n");
+            Console.Write($"   ╚══════════════════╝            ");
+
         }
 
         public void AddShipToBoard()
