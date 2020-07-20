@@ -15,13 +15,13 @@ namespace BattleShip
         {
             playerBoard = new char[10, 10];
         }
-        public void PrintXAxis()
+        public void PrintXAxis(Player player)
         {
             Console.Write("     1  2  3  4  5  6  7  8  9  10\n");
             Console.Write("   ╔═╧══╧══╧══╧══╧══╧══╧══╧══╧══╧═╗");
         }
 
-        public void PrintBoard(char[,] board)
+        public void PrintBoard(char[,] board, Player player)
         {
             PrintXAxis();
             char A = 'A';

@@ -8,6 +8,15 @@ namespace BattleShip
 {
     class Ship
     {
+        int size;
+        char firstLetter;
+        string name;
 
+        public Ship(string name, int size)
+        {
+            this.name = name;
+            this.size = size;
+            firstLetter = name.First();
+        }
     }
 }
