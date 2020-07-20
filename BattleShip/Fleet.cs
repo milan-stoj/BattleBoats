@@ -13,8 +13,11 @@ namespace BattleShip
         public Fleet()
         {
             fleet = new List<Ship>();
-            fleet.Add(new Ship("Destroyer", 4));
-            fleet.Add(new Ship(""))
+            fleet.Add(new Ship("Carrier", 5));
+            fleet.Add(new Ship("Battleship", 4));
+            fleet.Add(new Ship("Cruiser", 3));
+            fleet.Add(new Ship("Submarine", 3));
+            fleet.Add(new Ship("Patrol Boat", 2));
         }
     }
 }
