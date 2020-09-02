@@ -37,7 +37,7 @@ namespace BattleShip
                 Console.Write($"\n {Convert.ToChar((A + i))} ╢");
                 for (int j = 0; j < 10; j++)
                 {
-                    Console.Write($"( {board.playerBoard[i, j]} )");
+                    Console.Write($"({board.playerBoard[i, j]})");
                 }
                 Console.Write("║");
             }
